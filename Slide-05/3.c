@@ -19,17 +19,16 @@ int main(void){
       scanf("%d", &minha_conta2);
 
       //usar a conta com maior saldo para fazer as compras da lista
-      if (minha_conta1>minha_conta2){
-            for (int i = 0; i < 5; i++){
-                  compra(&minha_conta1, compras[i]);
-                  //Exibir o saldo da conta após cada compra
-                  printf("\nSaldo depois da compra %d: %d",i+1, minha_conta1);
-            }
-      }else {
-            for (int i = 0; i < 5; i++){
-                  compra(&minha_conta2, compras[i]);
-                  printf("\nSaldo depois da compra %d: %d",i+1, minha_conta2);
-            }
+      for (int i = 0; i < 5; i++){
+        if (minha_conta1>minha_conta2){
+            compra(&minha_conta1, compras[i]);
+            //Exibir o saldo da conta após cada compra
+            printf("\nSaldo da conta 1 depois da compra %d: %d",i+1, minha_conta1);
+        }
+        else { 
+            compra(&minha_conta2, compras[i]);
+            printf("\nSaldo da conta 2 depois da compra %d: %d",i+1, minha_conta2);
+        }
       }
 
       //Ao final, o programa deve exibir os saldos das duas contas
