@@ -32,8 +32,8 @@ int main(void){
       }
 
       //Ao final, o programa deve exibir os saldos das duas contas
-      printf("\n\nO saldo da conta 1: %d",minha_conta1);
-      printf("\nE o da segunda conta: %d\n",minha_conta2);
+      printf("\n\nO saldo final da conta 1: %d",minha_conta1);
+      printf("\nE o saldo final da segunda conta: %d\n",minha_conta2);
 
       return 0;
 }
