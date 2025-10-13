@@ -4,7 +4,7 @@
 struct atleta{
 
       char nome[10];
-      unsigned int altura;
+      unsigned int altura //em centímetros;
       unsigned int ataque;
       unsigned int saque;
       unsigned int bloqueio;
