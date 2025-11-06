@@ -19,16 +19,12 @@ int substring (char* s1, char* s2){
 
     for (int i = 0; i < tamanho(s1); i++){
 
-        if (s1[i] == s2[i]){
-            qtde++;
-        }
+        if (s1[i] == s2[i]){qtde++;}
+        
         if (s1[i] != s2[i]){ //quando o caractere for diferente, ele verifica se qtde == tamanho de s2, se sim s2 faz parte, se não ele reseta o contador
-            if (qtde == tamanho(s2)){
-                return 0;
-            }
+            if (qtde == tamanho(s2)){return 0;}
             else {qtde = 0;}   
         }
-
     }
 
     return 0;
