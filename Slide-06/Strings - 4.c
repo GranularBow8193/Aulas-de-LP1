@@ -22,7 +22,7 @@ int substring (char* s1, char* s2){
         if (s1[i] == s2[i]){
             qtde++;
         }
-        if (s1[i] != s2[i]){
+        if (s1[i] != s2[i]){ //quando o caractere for diferente, ele verifica se qtde == tamanho de s2, se sim s2 faz parte, se não ele reseta o contador
             if (qtde == tamanho(s2)){
                 return 0;
             }
