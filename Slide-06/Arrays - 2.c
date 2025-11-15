@@ -32,7 +32,7 @@ int main(){
     int linhas; int colunas;
     printf("Quantas linhas tem o vetor? ");
     scanf("%d",&linhas);
-    printf("Quantaas colunas tem o vetor? ");
+    printf("Quantas colunas tem o vetor? ");
     scanf("%d",&colunas);
     preenche(vetor, linhas, colunas);
 
