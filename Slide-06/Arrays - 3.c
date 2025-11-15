@@ -48,11 +48,5 @@ int main(){
       float det = determinante(vetor, linhasEColunas);
       printf("O determinante da matriz é: %.2f",det);
 
-      /*for (int i = 0; i < L; i++){
-            for (int j = 0; j < C; j++){
-                  printf("%d\n", vetor[i][j]);
-            }
-      }*/
-
       return 0;
 }
