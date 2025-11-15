@@ -36,12 +36,6 @@ int main(){
     scanf("%d",&colunas);
     preenche(vetor, linhas, colunas);
 
-    /*for (int i = 0; i < L; i++){
-            for (int j = 0; j < C; j++){
-                printf("%d\n", vetor[i][j]);
-            }
-    }*/
-
     printf("A média dos elementos do vetor é: %.2f\n",media(vetor,linhas,colunas));
     return 0;
 }
