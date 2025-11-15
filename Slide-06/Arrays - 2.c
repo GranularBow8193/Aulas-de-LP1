@@ -1,10 +1,9 @@
 #include <stdio.h>
 
-#define L 3
-#define C 3
+#define L 100
+#define C 100
 
 //Crie uma função media que receba um array bidimensional arr, a quantidade de linhas l, a quantidade de colunas c, e retorne a média entre todos os valores do array. L e C devem ser quaisquer valores constantes predefinidos.
-//array 3x3
 void preenche (int arr[L][C], int l, int c){
 
     for (int i = 0; i < l; i++){
@@ -23,14 +22,19 @@ float media (int arr[L][C], int l, int c){
             soma += arr[i][j];
         }
     }
-
-    return soma/9;
+    int qtde_elementos = l*c;
+    return soma/qtde_elementos;
 }
 
 int main(){
 
     int vetor[L][C];
-    preenche(vetor, 3, 3);
+    int linhas; int colunas;
+    printf("Quantas linhas tem o vetor? ");
+    scanf("%d",&linhas);
+    printf("Quantaas colunas tem o vetor? ");
+    scanf("%d",&colunas);
+    preenche(vetor, linhas, colunas);
 
     /*for (int i = 0; i < L; i++){
             for (int j = 0; j < C; j++){
@@ -38,6 +42,6 @@ int main(){
             }
     }*/
 
-    printf("A média dos elementos do vetor é: %.2f\n",media(vetor,3,3));
+    printf("A média dos elementos do vetor é: %.2f\n",media(vetor,linhas,colunas));
     return 0;
 }
