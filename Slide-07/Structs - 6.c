@@ -4,7 +4,7 @@
 struct atleta{
 
       char nome[10];
-      unsigned int altura //em centímetros;
+      unsigned int altura; //em centímetros
       unsigned int ataque;
       unsigned int saque;
       unsigned int bloqueio;
@@ -16,7 +16,7 @@ struct atleta{
 //Crie uma função que exiba as propriedades de maneira bem organizada e formatada.
 void propriedades(struct atleta A){
 
-      printf("Nome: %s\nAltura: %d\nSaque: %d\nBloqueio: %d\nPasse: %d\nLevantamento: %d\n\n",A.nome,A.altura, A.saque, A.bloqueio, A.bloqueio, A.passe, A.levantamento);
+      printf("Nome: %s\nAltura: %d\nAtaque: %d\nSaque: %d\nBloqueio: %d\nPasse: %d\nLevantamento: %d\n\n", A.nome, A.altura, A.ataque, A.saque, A.bloqueio, A.passe, A.levantamento);
 
 }
 
