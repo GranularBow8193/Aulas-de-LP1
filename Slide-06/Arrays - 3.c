@@ -33,9 +33,36 @@ float determinante (int arr[L][C], int lc){
             return det;
       }
       if (lc >= 4){
+            //laplace
+            float det = 0;
+            int arr_aux[L][C];
 
-            //fazer laplace
+            for(int j = 0; j < lc; j++) {
+            
+                  int aux_linha = 0;
+                  for(int i = 1; i < lc; i++){
+                        int aux_coluna = 0;
+                        for(int k = 0; k < lc; k++){
+                              if (k == j) continue; //pula a coluna
+                              arr_aux[aux_linha][aux_coluna] = arr[i][k];
+                              aux_coluna++;
+                        }
+                        aux_linha++;
+                  }
+
+                  short int sinal;
+                  if (j % 2 == 0){
+                        sinal = 1;
+                  }
+                  else{
+                        sinal = -1;
+                  }
+
+                  det += sinal * arr[0][j] * determinante(arr_aux, lc - 1);
+            }
+            return det;
       }
+      return 0;
 }
 
 int main(){
